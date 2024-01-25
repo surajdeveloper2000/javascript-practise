@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* button {
+            width: 100px;
+            height: 50px;
+            margin: 10px 0;
+            border-radius: 20px;
+            background-color: yellow;
+            font-size: 18px;
+        }
+        #box{
+            background-color: gold ;
+            width: 200px;
+            height: 200px;
+        } */
+
+        /* .parent{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <!-- <div class="parent" id="parentId">
+        <div class="child" id="childId"></div>
+    </div> -->
+
+    <!-- <div class="container">
+    1st way    <button class="button" onclick="alert('i am simple inline alert no one use me')">simple inline
+            alert</button><br>
+        <button class="button" onclick="callingFunction()">by calling a function</button><br>
+        <button class="button" id="third-way">inline event</button><br>
+        <button class="button" id="fourth-way">event listeners</button><br>
+    </div> -->
+
+
+    <!-- 💁‍♂️Event object  -->
+    <!-- <button class="button" id="fourth-way">event listeners</button> -->
+
+    <!-- 💁‍♂️MouseEvent  -->
+     <!-- <button id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">Click Me</button> -->
+
+    <!-- <div class="container">
+        <div id="box"></div>
+    </div> -->
+
+    <!-- 💁‍♂️ keyboard events in JavaScript  -->
+    <!-- <input type="text" class="suraj" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+   <br>
+    <p id="key"></p> -->
+
+    <!-- 💁‍♂️ input events in javascript  -->
+        <label for="">Your Name</label>
+        <input type="text" name="ice" id="ice">
+
+        <label>
+            <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                <option value="">select one</option>
+                <option value="chocolate">chocolate</option>
+                <option value="vanilla">vanilla</option>
+                <option value="strawberry">strawberry</option>
+            </select>
+        </label>
+        <div id="result"></div> 
+  
+         <!-- <div class="main">
+        <p>want to know my name</p>
+        <p id="showMyName"></p>
+        <button id="button">click here</button>
+    </div> -->
+
+    <!-- <div class="main">
+        <p>can you stop me when i reach at 5</p>
+        <button id="btn">start</button>
+        <button id="btn1">stop</button>
+    </div> -->
+    
+    </body> 
+
+<script>
+    // 💁‍♂️event propagation 
+    // const parentId = document.getElementById('parentId');
+    // const childId = document.getElementById('childId');
+
+    // const parentCall= ()=>{
+    //     alert('parent div');
+    //     console.log('parent div');
+    // }
+    // const childCall = ()=>{
+    //     alert('child div');
+    //     console.log('child div');
+    //     event.stopPropagation(); // it will call only one execpt this all function fires
+    // }
+
+    // parentId.addEventListener('click',parentCall, true); // this is the third value which false by default if you uses captruring phas then it will be true here  if you not give this then it will bubbling phase bydefault.
+    // childId.addEventListener('click',childCall , true); // also true here for capturing phase
+
+    // 👻Timing based events in javascript 
+
+  // 💁‍♂️ setTimeout();  => it is used for only time output show
+
+//   const myName = document.querySelector('#showMyName');
+//     const btn = document.querySelector('#button');
+
+//     const showMyName = () => {
+
+//         myName.innerHTML = "loading...😀"
+//         setTimeout(() => {
+//             myName.innerHTML = "suraj singh";
+//         }, 1000);
+//     }
+
+//     btn.addEventListener('click', showMyName);
+
+
+    // 💁‍♂️setInterval();
+
+    // const stopNum = document.querySelector('p');
+    // const btn = document.querySelector('#btn');
+    // const stopInterval = document.querySelector('#btn1');
+   
+    // let num = 0;
+    // let timeRef;    
+
+    // const showMyNum = ()=>{
+    //     stopNum.innerHTML = "loading...😃"
+
+    // timeRef = setInterval(() => {
+    //         stopNum.innerHTML = `${num}`
+    //         num++;
+    //     }, 1000);
+    // }
+
+    // btn.addEventListener('click',showMyNum)
+
+    // stopInterval.addEventListener('click',()=>{
+    //     clearInterval(timeRef);
+    // })
+    
+    // clearTimeout()
+
+    // clearInterval();
+
+
+    // 💁‍♂️input events in javascript 
+
+    // const  selectElement = ()=>{
+    // const inputChange = document.getElementById('ice').value;
+    // const iceCreams = document.getElementById('iceCreams').value;
+    // const result = document.getElementById('result');
+
+    // result.innerHTML = `Mr ${inputChange} select ${iceCreams} ice cream flavlour`
+    // };  
+
+
+    //💁‍♂️ keyboard event in javacsript 
+    // event that occur when user press a key on the board 
+    // belong to keyboardEvent oject
+
+    // KeyboardEvent objects describe a user interaction with the keyboard; each 
+    // event describes a single interaction between the user and a key (or combination
+    // of a key with modifier keys) on the keyboard. The event type
+    // (keydown, keypress, or keyup) identifies what kind of keyboard activity occurred.
+
+    // const keyPress = ()=>{
+    //     document.getElementById('key').innerHTML = `you press ${event.key} and its code is ${event.code}`
+    // }
+
+    // const keyDown = ()=>{
+    //     document.getElementById('key').innerHTML = `key is down`;
+    // }
+    // const keyUp = ()=>{
+    //     document.getElementById('key').innerHTML = `key is up`;
+    // }
+
+    // const mEnter = document.getElementById('box');
+
+    // mEnter.addEventListener('mouseenter',()=>{
+    //     mEnter.style. backgroundColor = 'red';
+    //     console.log('mouse enter bro');
+    // }
+    // )
+    // mEnter.addEventListener('mouseleave',()=>{
+    //     console.log('mouse leave bro');
+    //     mEnter.style. backgroundColor = 'red';
+    // });
+
+
+    //2nd way
+    // const callingFunction = () => {
+    //     alert('most common way of writting function');
+    // }
+
+    // third way 
+    // const thirdWay = document.getElementById('third-way');
+    // thirdWay.onclick = function () {
+    //     alert('most common way of writting function again')
+    // }
+
+    // fourthway  
+    // const fourthWay = document.querySelector('#fourth-way');
+    // fourthWay.addEventListener('click', () => {
+    //     alert('i love this way of writting')
+    //     })
+
+    // difference betweeen third and fouth way ?
+
+    // const thirdWay = document.getElementById('third-way');
+    // thirdWay.onclick = function () {
+    //     alert('most common way of writting function again')
+    // }
+    // thirdWay.onclick = function () {
+    //     console.log(('most common way of writting function again'));
+    // }
+    // we can not give log here because it will overwrite alert and only log will show
+    // if we use llog in first then alert will show
+
+    // wheras 
+    // here you can call same event in muultiple time both will show 
+
+    // const fourthWay = document.querySelector('#fourth-way');
+    // fourthWay.addEventListener('click', () => {
+    //     alert('i love this way of writting')
+    // })
+    // fourthWay.addEventListener('click', () => {
+    //     console.log(('i love this way of writting'));
+    // })
+
+
+    //💁‍♂️ Event Object  
+    // const fourthWay = document.getElementById('fourth-way');
+
+    // const checkEvent = () => {
+    //     alert('hum dekh rhe h event object')
+    //     console.log(event);
+    //     console.log(event.target);
+    //     console.log(event.type);
+    // }
+
+    // fourthWay.addEventListener('click', checkEvent);
+
+    //💁‍♂️ Mouse events => those events which are related to the mouse  
+    // event that occur when interact with html
+    // document belog to the MouseEvent object
+    
+    // function mouseDown() { // when we click on button and hold it
+    //     document.getElementById("myP").style.background = "red";
+    //     document.getElementById("myP").style.color = "white";
+    // }
+    // function mouseUp() { // when we leave it
+    //     document.getElementById("myP").style.background = "green";
+    // }
+
+    // 💁‍♂️keyboard event in javascript  
+
+
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript advance</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // PromiseOne 
+    // promise takes callback function
+    // const PromiseOne = new Promise(function (resolve, reject) {
+    //     // do and async task
+    //     // db calls , cryptography, network call
+    //     setTimeout(function () {
+    //         console.log("async task is coplete");
+    //         resolve() // resolve is directly connected with then
+    //     }, 1000);
+    // });
+
+    // // after this we will consume this promiseOne
+    // // resolve connection with .then
+    // PromiseOne.then(function () { // it automatically receieve an argument which work is that peomiseOne value give retrun
+    //     console.log("promise consumed");
+    // });
+
+    // // PromiseTwo
+    // // short writting syntax
+    // new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //         console.log("asyn task two");
+    //         resolve();
+    //     }, 1000);
+    // }).then(function () { // it gives also a function
+    //     console.log("async two resolved");
+    // });
+
+
+    // promiseThree (in this how can we take data frome sesolve to then ?)
+    // const promiseThree = new Promise(function (resolve, reject) {
+    //     setTimeout(() => {
+    //         resolve({ username: "chai", email: "chai@gmail.com" }); //we can pass data here mostly objects used here but you can anyone
+    //     }, 1000);
+    // });
+
+    // promiseThree.then(function (user) { // bcz here connection between resolve and then then we can assume that some data will pass here like
+    //     console.log(user);
+    // })
+
+
+    // promiseFour
+    // const promiseFour = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //         let error = true
+    //         if (!error) {
+    //             resolve({ username: "suraj", password: "123" })
+    //         } else {
+    //             reject("error")
+    //         }
+    //     }, 1000);
+    // });
+    // promiseFour.then((user) => {
+    //     console.log(user);
+    //     return user.username
+    // }).then((username) => {
+    //     console.log(username);
+    // }).catch(function (error) {
+    //     console.log(error);
+    // }).finally(() => console.log("the promise is either resolve or rejected"))
+
+
+    // we can use also prmise five method to do same thing
+
+    // promiseFive
+    // const promiseFive = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //         let error = true
+    //         if (!error) {
+    //             resolve({ username: "javascript", password: "123" })
+    //         } else {
+    //             reject("error js went wrong")
+    //         }
+    //     }, 1000);
+    // })
+
+    // async function consumePromiseFive() {
+    //    try{
+    //     const response = await promiseFive
+    //     console.log(response);
+    //    }catch(error){
+    //     console.log(error);
+    //    }
+    // }
+    // consumePromiseFive(); 
+
+</script>
+
+</html>
